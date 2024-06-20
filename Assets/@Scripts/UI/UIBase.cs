@@ -78,6 +78,8 @@ public abstract class UIBase : InitBase
         }
     }
 
+
+    /* // 이전 코드
     public bool IsEnabled { get; private set; } = true;
 
     public virtual void OpenUI()
@@ -91,4 +93,5 @@ public abstract class UIBase : InitBase
         gameObject.SetActive(false);
         IsEnabled = false;
     }
+    */
 }

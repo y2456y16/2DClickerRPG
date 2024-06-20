@@ -9,9 +9,6 @@ using UnityEngine.UI;
 //전체적으로 수정 예정
 public class UIManager
 {
-    private readonly Dictionary<string, UIBase> _uiList = new Dictionary<string, UIBase>(MAX_SIZE);
-    private const byte MAX_SIZE = 40;
-
 
     private int _order;
     private Stack<UIPopup> _popupStack = new Stack<UIPopup>();
@@ -177,7 +174,9 @@ public class UIManager
 
 
 
- 
+    /* //이전 코드
+    private readonly Dictionary<string, UIBase> _uiList = new Dictionary<string, UIBase>(MAX_SIZE);
+    private const byte MAX_SIZE = 40;
 
     public T ShowUI<T>(string name = null) where T : UIBase //UI 존재 여부 체크 후 생성 or 활성화
     {
@@ -294,5 +293,5 @@ public class UIManager
         Debug.LogError($"알수없는 오류");
         return false;
     }
-
+    */
 }
