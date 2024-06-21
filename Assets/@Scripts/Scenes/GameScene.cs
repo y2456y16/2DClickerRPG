@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Define;
 
 public class GameScene : BaseScene
 {
@@ -15,7 +16,17 @@ public class GameScene : BaseScene
         map.transform.position = Vector3.zero;
         map.name = "@BaseMap";
 
+        Player player = Managers.ObjManage.Spawn<Player>(Vector3.zero);
+        player.CharacterState = ECharacterState.Idle;
+
+        Managers.UI.ShowBaseUI<UIJoyStick>();
+
         return true;
+    }
+
+    public override void Clear()
+    {
+        
     }
 
 }

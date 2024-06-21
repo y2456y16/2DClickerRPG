@@ -18,7 +18,13 @@ MonoBehaviour:
   m_GUID: c96c551a7738a1a4ba77c1700ef33c65
   m_SerializeEntries:
   - m_GUID: 239e0462ede22944698da79cc4e97d73
-    m_Address: '@BaseMap'
+    m_Address: BaseMap
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bb4f33522408b34a8399de5af37946d
+    m_Address: UIJoyStick
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad

@@ -26,7 +26,7 @@ public class ResourceManager
         GameObject prefab = Load<GameObject>(key);
         if (prefab == null)
         {
-            Debug.LogError($"Failed to Load prefab : {key}");
+            Debug.Log($"Failed to Load prefab : {key}");
             return null;
         }
 
@@ -36,7 +36,7 @@ public class ResourceManager
         GameObject go = Object.Instantiate(prefab, parent);
         go.name = prefab.name;
 
-        return null;
+        return go;
     }
 
     public void Destroy(GameObject go)

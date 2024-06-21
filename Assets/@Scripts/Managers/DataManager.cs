@@ -10,11 +10,12 @@ public interface ILoader<Key, Value>//데이터 sheet 상에서 순번 구분을
 }
 public class DataManager
 {
+    const string DATAPATH = "TestData";
     public Dictionary<int, Data.TestData> TestDic { get; private set; } = new Dictionary<int, Data.TestData>();
     
     public void Init()
     {
-        TestDic = LoadJson<Data.TestDataLoader, int, Data.TestData>("TestData").MakeDict();
+        TestDic = LoadJson<Data.TestDataLoader, int, Data.TestData>(DATAPATH).MakeDict();
     }
 
     private Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

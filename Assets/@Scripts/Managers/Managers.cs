@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public class Managers : MonoBehaviour
@@ -8,12 +9,23 @@ public class Managers : MonoBehaviour
     private static Managers _instance;
     private static Managers Instance { get { Init();  return _instance; } }
 
+
+    private GameManager _game = new GameManager();
+    private ObjectManager _objManage = new ObjectManager();
+
+
     private DataManager _data = new DataManager();
     private PoolManager _pool = new PoolManager();
     private ResourceManager _resource = new ResourceManager();
     private SceneManagerEx _scene = new SceneManagerEx();
     private SoundManager _sound = new SoundManager();
     private UIManager _ui = new UIManager();
+
+
+    public static GameManager Game { get { return Instance?._game; } }
+    public static ObjectManager ObjManage { get { return Instance?._objManage; } }
+
+
 
     public static DataManager Data { get { return Instance?._data; } }
     public static PoolManager Pool { get { return Instance?._pool; } }
