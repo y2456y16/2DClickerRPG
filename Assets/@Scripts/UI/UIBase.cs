@@ -28,7 +28,7 @@ public abstract class UIBase : InitBase
                 objects[i] = Util.FindChild<T>(gameObject, names[i], true);
 
             if (objects[i] == null)
-                Debug.LogError($"Failed to bind({names[i]})");
+                Debug.Log($"Failed to bind({names[i]})");
         }
     }
 

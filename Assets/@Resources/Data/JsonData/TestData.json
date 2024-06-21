@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "Level": 1,
+      "Exp": 100,
+      "Skills": [
+        1
+      ],
+      "Speed": 3.5,
+      "Name": "Cheol"
+    }
+  ]
+}
